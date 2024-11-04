@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Header } from "./components/header";
 import { Tasks } from "./components/tasks";
+import { Nav } from "./components/Navbar";
 
 const LOCAL_STORAGE_KEY = "todo:savedTasks"
 
@@ -52,6 +53,7 @@ function App() {
 
   return (
     <>
+    <Nav />
       <Header onAddTask={addTask} />
       <Tasks
         tasks={tasks}
